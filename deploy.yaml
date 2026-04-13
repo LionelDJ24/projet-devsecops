@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: app-backend:v1
-        imagePullPolicy: Never
+        image: lionelnw/devsecops-backend:latest
         env:
         - name: DB_HOST
           value: "db-service"
@@ -49,8 +48,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: app-frontend:v1
-        imagePullPolicy: Never
+        image: lionelnw/devsecops-frontend:latest
         env:
         - name: BACKEND_URL
           value: "http://backend-service:5000/api/data"
